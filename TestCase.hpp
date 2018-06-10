@@ -68,8 +68,8 @@ class TestCase{
      return *this;  
     }
     TestCase& print(){
-    cout << myname <<": " << NoPass << " failed, " << Pass<< " passed, " << numOfFunction << " total." << endl ;
-    cout << "---" << endl; 
+    os << myname <<": " << NoPass << " failed, " << Pass<< " passed, " << numOfFunction << " total." << endl ;
+    os << "---" << endl; 
     return *this;  
     }
 
