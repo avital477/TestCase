@@ -33,12 +33,12 @@ class TestCase{
 
     template <typename T> TestCase& check_different(T a, T b){
         numOfFunction++;
-        if(a == b){
+        if(a != b)
+            Pass++;
+        else{
             NoPass++;
             os << myname <<": Failure in test #" << numOfFunction <<": " << a <<" should not equal" << b<<"!"<< endl; 
         }
-        else
-            Pass++;
         return *this;      
     }
     template <typename T> TestCase& check_output(T variable, string s){
